@@ -6,6 +6,37 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
+    private static class Node {
+
+        private final int value;
+        private Node prev;
+        private Node next;
+
+        protected Node(int i) {
+            value = i;
+        }
+
+        private int getValue() {
+            return value;
+        }
+
+        private Node getPrev() {
+            return prev;
+        }
+
+        private void setPrev(Node prev) {
+            this.prev = prev;
+        }
+
+        private Node getNext() {
+            return next;
+        }
+
+        private void setNext(Node next) {
+            this.next = next;
+        }
+    }
+
     protected void push(int i) {
         if (last == null)
             last = new Node(i);
